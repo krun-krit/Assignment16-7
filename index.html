@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Register</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark" >
+            <img src="https://cdn.pixabay.com/photo/2012/04/11/11/46/logo-27661_960_720.png" alt="" width="50" height="40">
+            <h4 class="heading text-warning">Register Page</h4>
+      </nav>  
+    <form
+      action="form.html"
+      method="post"
+      name="myForm"
+      onsubmit="return formValid();"
+    >
+      <div id="container" class="content">
+        <table>
+          <tr>
+            <td>First Name</td>
+            <td>
+              <input type="text" name="fname" />
+            </td>
+          </tr>
+          <tr>
+            <td>Last Name</td>
+            <td>
+              <input type="text" name="lname" />
+            </td>
+          </tr>
+          <tr>
+            <td>User ID</td>
+            <td>
+              <input type="text" name="uid" />
+            </td>
+          </tr>
+          <tr>
+            <td>Password</td>
+            <td>
+              <input type="password" name="pass" />
+            </td>
+          </tr>
+          <tr>
+            <td>E-mail</td>
+            <td>
+              <input type="text" name="email" />
+            </td>
+          </tr>
+        </table>
+        <div class="buttons">
+            <input type="submit" name="btnRegister" value="Register" class="register" />
+            <input type="reset" name="btnReset" value="Reset" class="reset"/>
+        </div>
+      </div>
+    </form>
+    <script>
+      function formValid() {
+        var fname = document.getElementsByName("fname")[0].value;
+        var lname = document.getElementsByName("lname")[0].value;
+        var uid = document.getElementsByName("uid")[0].value;
+        var pass = document.getElementsByName("pass")[0].value;
+        var email = document.getElementsByName("email")[0].value;
+
+        if ((fname == null || fname == "") && (lname == null || lname == "")) {
+          alert("Enter Your name ");
+          return false;
+        }
+
+        if (uid == null || uid == "") {
+          alert("Enter your user ID");
+          return false;
+        }
+        if ((pass == null || pass == "") && (cpass == null || cpass == "")) {
+          alert("Enter password");
+          return false;
+        }
+
+        if (email == null || email == "") {
+          alert("Enter your email number");
+          return false;
+        }
+
+        alert("Form Validated Successfully! Submitting Details... "+"\n"+"Firstname : "+fname+"\r"+"Lastname : "+lname+"\n"+"User ID : "+uid+"\r"+"Email : "+email);
+        return false; // Make this return true to submit form
+      }
+    </script>
+</body>
+</html>
