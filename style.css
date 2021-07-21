@@ -1,6 +1,7 @@
 .html, body {
   padding: 0;
   margin: 0;
+  background-color: #000;
   background-image: url("https://www.setaswall.com/wp-content/uploads/2019/05/Huawei-MateBook-E-2019-Stock-Wallpaper-11-2160x1440-768x512.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -48,19 +49,30 @@ form {
 
 .register {
   margin: 10px;
-  padding: 15px;
+  padding: 10px;
   border: 2px solid #00FF99;
   background-color: #CA7DEF;
   color: #00FF99;
-  border-radius: 30px;
+  border-radius: 25px;
 }
 
 .reset {
   margin: 10px;
-  padding: 15px;
+  padding: 10px;
   border: 2px solid #00FF99;
   background-color: #CA7DEF;
   color: #00FF99;
-  border-radius: 30px;
+  border-radius: 25px;
+}
+
+.nameUser {
+  display: inline;
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+  font-family: 'Droid Sans Thai', Arial, sans-serif;
+  font-size: 16px;
 }
 /*# sourceMappingURL=style.css.map */
